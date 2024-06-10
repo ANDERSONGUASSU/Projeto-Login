@@ -57,14 +57,14 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 
 <ol>
 <li>Para iniciar a aplicação, execute:
-<pre><code>python main.View.py</code></pre>
+<pre><code>python app.py</code></pre>
 </li>
 <li>Utilize a interface gráfica para:
 <ul>
 <li>Registrar novos usuários.</li>
 <li>Fazer login.</li>
 <li>Alterar senha.</li>
-<li>Enviar código de verificação por email.</li>
+<li>Recuperar senha esquecida.</li>
 </ul>
 </li>
 </ol>
@@ -76,7 +76,8 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 <ul>
 <li><code>registerView.py</code>: Tela de cadastro de novos usuários.</li>
 <li><code>changePassword.py</code>: Tela de alteração de senha.</li>
-<li><code>main.View.py</code>: Tela principal após login.</li>
+<li><code>mainView.py</code>: Tela principal após login.</li>
+<li><code>forgotPassworView</code>: Tela para recuperar senha esquecida.</li>
 </ul>
 </li>
 <li><strong>controller/</strong>
@@ -99,7 +100,7 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 <h2>Contribuição</h2>
 
 <ol>
-<li>Faça um fork do projeto.</li>
+<li>Faça um fork do projeto e ajude-me a melhorá-lo.</li>
 <li>Crie uma branch para sua feature (<code>git checkout -b feature/AmazingFeature</code>).</li>
 <li>Commit suas mudanças (<code>git commit -m 'Add some AmazingFeature'</code>).</li>
 <li>Push para a branch (<code>git push origin feature/AmazingFeature</code>).</li>
@@ -108,7 +109,5 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 
 <h2>Contato</h2>
 
-<p>Para suporte ou contribuições, entre em contato através do email: <code>&lt;seu_email&gt;</code></p>
+<p>Para suporte ou contribuições, entre em contato através do email: <code>&lt;andersonguassu@hotmail.com&gt;</code></p>
 
-</body>
-</html>
