@@ -22,7 +22,11 @@
 <h3>Passos de Instalação</h3>
 <ol>
 <li>Clone o repositório:
-<pre><code>git clone &lt;URL do repositório&gt;
+<h4>HTTPS</h4>
+<pre><code>git clone &lt;https://github.com/ANDERSONGUASSU/Projeto-Login.git&gt;
+cd &lt;d</code></pre>
+<h4>SSH</h4>
+<pre><code>git clone &lt;git@github.com:ANDERSONGUASSU/Projeto-Login.git&gt;
 cd &lt;d</code></pre>
 </li>
 <li>Crie um ambiente virtual:
