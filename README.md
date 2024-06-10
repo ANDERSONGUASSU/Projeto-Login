@@ -111,5 +111,5 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 
 <h2>Contato</h2>
 
-<p>Para suporte ou contribuições, entre em contato através do email: <code>&lt;andersonguassu@hotmail.com&gt;</code></p>
+<p>Para suporte ou contribuições, entre em contato através do email: <code>andersonguassu@hotmail.com</code></p>
 
