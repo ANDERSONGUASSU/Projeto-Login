@@ -1,14 +1,15 @@
 <h1>Projeto de Gerenciamento de Usuários</h1>
 
 <h2>Descrição do Projeto</h2>
-<p>Este projeto é uma aplicação para gerenciamento de usuários, incluindo funcionalidades como cadastro, login, alteração de senha e verificação por email. Utiliza o framework <code>customtkinter</code> para a interface gráfica e <code>SQLAlchemy</code> para gerenciamento do banco de dados.</p>
+<p>Este projeto é uma aplicação para gerenciamento de usuários, oferecendo funcionalidades essenciais como cadastro, login e alteração de senha. Para sua interface gráfica, ele utiliza o framework <code>customtkinter</code>, proporcionando uma experiência de usuário intuitiva e amigável. O gerenciamento do banco de dados <code>Postgesql</code> é realizado por meio do poderoso <code>SQLAlchemy</code>, garantindo eficiência e robustez.</p>
+<p>Este projeto foi desenvolvido como parte de um desafio Python Full, onde os participantes foram desafiados a criar um sistema de login completo. Optei por ir além e implementar uma interface gráfica utilizando o Tkinter, adicionando novas funcionalidades ao sistema. Além das operações tradicionais de login e cadastro, introduzi recursos avançados como a atualização de senha e a opção de recuperar a senha enviando um código de verificação por email, fornecendo uma camada adicional de segurança e conveniência para os usuários.</p>
 
 <h2>Funcionalidades Principais</h2>
 <ul>
 <li>Cadastro de novos usuários.</li>
 <li>Autenticação de usuários.</li>
 <li>Atualização de senha.</li>
-<li>Envio de código de verificação por email.</li>
+<li>Recuperar senha com envio de código de verificação por email.</li>
 </ul>
 
 <h2>Configuração e Instalação</h2>
