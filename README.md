@@ -79,7 +79,7 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 <li><code>registerView.py</code>: Tela de cadastro de novos usuários.</li>
 <li><code>changePassword.py</code>: Tela de alteração de senha.</li>
 <li><code>mainView.py</code>: Tela principal após login.</li>
-<li><code>forgotPassworView</code>: Tela para recuperar senha esquecida.</li>
+<li><code>forgotPassworView.py</code>: Tela para recuperar senha esquecida.</li>
 </ul>
 </li>
 <li><strong>controller/</strong>
@@ -111,5 +111,5 @@ EMAIL_PASSWORD=&lt;token_de_senha_gerado&gt;</code></pre>
 
 <h2>Contato</h2>
 
-<p>Para suporte ou contribuições, entre em contato através do email: <code>&lt;andersonguassu@hotmail.com&gt;</code></p>
+<p>Para suporte ou contribuições, entre em contato através do email: <code>andersonguassu@hotmail.com</code></p>
 
