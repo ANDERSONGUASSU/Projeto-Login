@@ -86,7 +86,7 @@ class ChangePasswordView(CTkToplevel):
 
         self.new_password_label = CTkLabel(
             self.frame,
-            text="Senha:",
+            text="Nova senha:",
         )
         self.new_password_label.grid(
             row=2,
@@ -132,9 +132,13 @@ class ChangePasswordView(CTkToplevel):
             pady=10,
         )
 
-        self.back_button = CTkButton(self.frame, text="Voltar", command=self.destroy)
+        self.back_button = CTkButton(
+            self.frame,
+            text="Voltar",
+            command=self.destroy,
+        )
         self.back_button.grid(
-            row=1,
+            row=3,
             column=1,
             padx=5,
             pady=10,
@@ -162,15 +166,28 @@ class ChangePasswordView(CTkToplevel):
         old_password = self.old_password_entry.get()
         new_password = self.new_password_entry.get()
 
-        if old_password == self.user.password:
-            (
-                success,
-                message,
-            ) = self.user_controller.update_password(
+        if hasattr(self, 'message_label'):
+            self.message_label.destroy
+        if hasattr(self, 'error_label'):
+            self.error_label.destroy
+
+        if self.user.check_password(old_password):
+            success, message = self.user_controller.update_password(
                 self.user.email,
                 new_password,
             )
-            if success:
+            if success is True:
+
+                self.message_label = CTkLabel(
+                    self.frame,
+                    text=message,
+                )
+                self.message_label.grid(
+                    row=4,
+                    columnspan=2,
+                )
+                self.after(2000, self.destroy)
+            else:
                 self.message_label = CTkLabel(
                     self.frame,
                     text=message,
@@ -180,10 +197,9 @@ class ChangePasswordView(CTkToplevel):
                     columnspan=2,
                 )
         else:
-
             self.error_label = CTkLabel(
                 self.frame,
-                text="Digite a senha do usuario corretamente",
+                text='Senha antiga incorreta',
             )
             self.error_label.grid(
                 row=4,

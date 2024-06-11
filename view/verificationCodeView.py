@@ -10,15 +10,16 @@ class VerificationCodeView(CTkToplevel):
         self.email = email
         self.title("Recuperar Senha")
 
-        width = 600
-        height = 400
+        width = 900
+        height = 500
 
         win_width = self.winfo_screenwidth()
         win_height = self.winfo_screenheight()
 
-        x = (win_width - width) // 2
+        x = (win_width - width) // 1.5
         y = (win_height - height) // 2
         self.geometry(f"{width}x{height}+{x}+{y}")
+
         self.frame = CTkFrame(self)
         self.frame.place(
             relx=0.5,

@@ -1,5 +1,7 @@
-from customtkinter import CTkToplevel, CTkFrame, CTkLabel, CTkEntry, CTkButton
+import os
+from customtkinter import CTkToplevel, CTkFrame, CTkLabel, CTkEntry, CTkButton, CTkImage
 from controller.controllerUser import UserController
+from PIL import Image
 
 
 class ResetPasswordView(CTkToplevel):
@@ -25,6 +27,15 @@ class ResetPasswordView(CTkToplevel):
             rely=0.5,
             anchor="center",
         )
+        image_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+            "assets",
+            "img",
+        )
+        self.eye_icon = CTkImage(Image.open(os.path.join(image_path, "Eye.png")))
+        self.closed_eye_icon = CTkImage(
+            Image.open(os.path.join(image_path, "Closed_Eye.png"))
+        )
 
         self.new_password_label = CTkLabel(
             self.frame,
@@ -45,6 +56,18 @@ class ResetPasswordView(CTkToplevel):
             padx=5,
             pady=5,
             sticky="w",
+        )
+        self.show_new_password = False
+        self.new_toggle_button = CTkButton(
+            self.frame,
+            text="",
+            image=self.closed_eye_icon,
+            width=3,
+            command=self.toggle_new_password,
+        )
+        self.new_toggle_button.grid(
+            row=0,
+            column=2,
         )
         self.update_password_button = CTkButton(
             self.frame,
@@ -70,6 +93,15 @@ class ResetPasswordView(CTkToplevel):
             pady=10,
         )
 
+    def toggle_new_password(self):
+        if self.show_new_password:
+            self.new_password_entry.configure(show="*")
+            self.new_toggle_button.configure(image=self.closed_eye_icon)
+        else:
+            self.new_password_entry.configure(show="")
+            self.new_toggle_button.configure(image=self.eye_icon)
+        self.show_new_password = not self.show_new_password
+
     def update_password(self):
         new_password = self.new_password_entry.get()
         (success, message) = self.user_controller.update_password(
@@ -89,3 +121,4 @@ class ResetPasswordView(CTkToplevel):
                 pady=5,
                 sticky="ew",
             )
+            self.after(2000, self.destroy)
